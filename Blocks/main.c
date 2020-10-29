@@ -21,9 +21,9 @@ int main(int argc, const char * argv[]) {
     printf("%d\n", onBlock(7));
 
 #pragma mark # Block directly
-    char *charCitys[3] = { "Uraí", "Londrina", "Curitiba" };
+    char *charCities[3] = { "Uraí", "Londrina", "Curitiba" };
     
-    qsort_b(charCitys, 3, sizeof(char *), ^(const void *l, const void *r) {
+    qsort_b(charCities, 3, sizeof(char *), ^(const void *l, const void *r) {
         char *onLeftSide = *(char **)l;
         char *onRightSide = *(char **)r;
         
@@ -31,7 +31,7 @@ int main(int argc, const char * argv[]) {
     });
     
     for (int index=0; index<3; index++) {
-        printf("sorted: %s ", charCitys[index]);
+        printf("sorted: %s ", charCities[index]);
     }
     
     return 0;
